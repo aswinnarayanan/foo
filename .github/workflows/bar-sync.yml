@@ -1,0 +1,18 @@
+name: bar-sync
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a multi-line script
+        run: |
+          git config --local user.name "Github Action"
+          git config --local user.email "actions@github.com"
+          git subtree push --prefix bar https://${{ secrets.BAR_SYNC }}@github.com/aswinnarayanan/bar.git main
