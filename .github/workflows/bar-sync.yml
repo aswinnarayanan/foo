@@ -2,9 +2,11 @@ name: bar-sync
 
 on:
   push:
-    branches: [ main ]
+    paths:
+      - bar/*
   pull_request:
-    branches: [ main ]
+    paths:
+      - bar/*
 
 jobs:
   build:
