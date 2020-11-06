@@ -18,7 +18,6 @@ jobs:
           git config --local user.name "Github Action"
           git config --local user.email "actions@github.com"
           git config pull.ff only
-          #git subtree split --rejoin --prefix=bar
-          git subtree pull --prefix bar https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/bar.git main --squash
-          #git push
-          #git subtree push --prefix bar https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/bar.git main
+          git pull
+          git push
+          git subtree pull --prefix bar https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/bar.git main
