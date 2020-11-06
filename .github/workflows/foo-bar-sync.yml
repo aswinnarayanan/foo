@@ -2,13 +2,9 @@ name: bar-sync
 
 on:
   push:
-    paths:
-      - bar/*
-      - .github/workflows/bar-sync.yml
+    branches: [ main ]
   pull_request:
-    paths:
-      - bar/*
-      - .github/workflows/bar-sync.yml
+    branches: [ main ]
 
 jobs:
   build:
