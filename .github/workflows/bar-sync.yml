@@ -24,4 +24,4 @@ jobs:
           git remote add subtree https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/bar.git
           git pull upstream main
           git push upstream main
-          git subtree pull --prefix bar subtree main
+          git subtree pull --prefix bar subtree main --squash
