@@ -20,7 +20,8 @@ jobs:
           git config pull.ff only
           git status
           ls -l
-          #git remote add subtree https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/bar.git
-          #git pull origin main
-          #git push origin main
+          git remote add origin https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/foo.git
+          git remote add subtree https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/bar.git
+          git pull origin main
+          git push origin main
           #git subtree pull --prefix bar subtree main
