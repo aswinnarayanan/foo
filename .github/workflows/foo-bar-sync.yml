@@ -21,9 +21,5 @@ jobs:
           git config --local user.name "Github Action"
           git config --local user.email "actions@github.com"
           git config pull.ff only
-          git status
-          ls -l
-          git remote add upstream https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/foo.git
-          git remote add subtree https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/bar.git
-          git subtree pull --prefix bar subtree main
-          git push upstream main
+          git subtree pull --prefix bar https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/bar.git main
+          git push https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/foo.git main
