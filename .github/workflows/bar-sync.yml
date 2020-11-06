@@ -17,6 +17,7 @@ jobs:
         run: |
           git config --local user.name "Github Action"
           git config --local user.email "actions@github.com"
+          git config pull.ff only
           git pull
           git subtree pull --prefix bar https://github-actions:${{secrets.BAR_SYNC}}@github.com/aswinnarayanan/bar.git main
           #git push
