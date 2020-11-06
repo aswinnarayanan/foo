@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - bar/*
+      - .github/workflows/bar-sync.yml
   pull_request:
     paths:
       - bar/*
+      - .github/workflows/bar-sync.yml
 
 jobs:
   build:
