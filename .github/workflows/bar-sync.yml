@@ -24,7 +24,7 @@ jobs:
           echo "TEST=$TEST" >> $GITHUB_ENV
       - run: echo "TEST=env.TEST"
       - name: Run a multi-line script
-        if: contains('testtruefalse', env.TEST)
+        if: contains('testtrufalse', env.TEST)
         run: |
           git config --local user.name "Github Action"
           git config --local user.email "actions@github.com"
