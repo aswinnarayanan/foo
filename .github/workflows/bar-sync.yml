@@ -20,11 +20,11 @@ jobs:
           fetch-depth: 0
       - name: Test
         run: |
-          TEST="|qsmxt|"
-          echo "TEST=$TEST" >> $GITHUB_ENV
-      - run: echo "TEST=env.TEST"
+          FREESPACE=$(cat free-space-list.txt)
+          echo "FREESPACE=$FREESPACE" >> $GITHUB_ENV
+      - run: echo "FREESPACE=env.FREESPACE"
       - name: Run a multi-line script
-        if: contains('|fsl|mrtrix3|devbase|qsmxt|mrtrix3tissue|samri|', env.TEST)
+        if: contains(env.FREESPACE, 'samri')
         run: |
           git config --local user.name "Github Action"
           git config --local user.email "actions@github.com"
