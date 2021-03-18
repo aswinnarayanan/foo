@@ -18,7 +18,12 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+      - name: Test
+        run: |
+          TEST=true
+          echo "TEST=$TEST" >> $GITHUB_ENV
       - name: Run a multi-line script
+        if: env.TEST == true
         run: |
           git config --local user.name "Github Action"
           git config --local user.email "actions@github.com"
