@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
       - name: Test
         run: |
-          FREESPACE=$(cat free-space-list.txt)
+          FREESPACE=$(cat .github/workflows/free-space-list.txt)
           echo "FREESPACE=$FREESPACE" >> $GITHUB_ENV
       - run: echo "FREESPACE=env.FREESPACE"
       - name: Run a multi-line script
