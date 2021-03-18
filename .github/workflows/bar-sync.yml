@@ -22,6 +22,7 @@ jobs:
         run: |
           TEST=true
           echo "TEST=$TEST" >> $GITHUB_ENV
+          echo "TEST=$TEST"
       - name: Run a multi-line script
         if: env.TEST == true
         run: |
