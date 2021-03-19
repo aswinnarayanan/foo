@@ -26,7 +26,7 @@ jobs:
           echo "APP=|$tissue|" >> $GITHUB_ENV
       - run: echo "FREESPACE=env.FREESPACE"
       - name: Run a multi-line script
-        if: contains(env.FREESPACE, "env.APP")
+        if: contains(env.FREESPACE, env.APP)
         run: |
           git config --local user.name "Github Action"
           git config --local user.email "actions@github.com"
