@@ -23,7 +23,7 @@ jobs:
           FREESPACE=$(cat .github/workflows/free-space-list.txt)
           echo "FREESPACE=$FREESPACE" >> $GITHUB_ENV
           APP=mrtrix3tissue
-          echo "APP=|$tissue|" >> $GITHUB_ENV
+          echo "APP=|$APP|" >> $GITHUB_ENV
       - run: echo "FREESPACE=env.FREESPACE"
       - name: Run a multi-line script
         if: contains(env.FREESPACE, env.APP)
