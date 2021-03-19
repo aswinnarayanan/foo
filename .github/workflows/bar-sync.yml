@@ -22,7 +22,7 @@ jobs:
         run: |
           FREESPACE=$(cat .github/workflows/free-space-list.txt)
           echo "FREESPACE=$FREESPACE" >> $GITHUB_ENV
-          APP=tissue
+          APP=mrtrix3tissue
           echo "APP=|$tissue|" >> $GITHUB_ENV
       - run: echo "FREESPACE=env.FREESPACE"
       - name: Run a multi-line script
