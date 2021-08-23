@@ -3,6 +3,7 @@ name: Foo-Bar Action Initiator
 on:
   push:
     branches: [ main ]
+    
   pull_request:
     branches: [ main ]
 
