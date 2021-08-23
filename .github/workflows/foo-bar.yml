@@ -2,16 +2,16 @@ name: Foo-Bar Action Initiator
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
   repository_dispatch:
 
 jobs:
   foo-bar:
     runs-on: ubuntu-latest
     steps:
-      - name: PING - Dispatch initiating repository event
+      - name: FOO - Dispatch initiating repository event
         run: |
           curl -X POST https://api.github.com/repos/aswinnarayanan/bar/dispatches \
           -H 'Accept: application/vnd.github.v3+json' \
