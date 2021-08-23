@@ -15,4 +15,4 @@ jobs:
           curl -X POST https://api.github.com/repos/aswinnarayanan/bar/dispatches \
           -H 'Accept: application/vnd.github.v3+json' \
           -u ${{ secrets.ACCESS_TOKEN }} \
-          --data '{"event_type": "foo", "client_payload": { "GITHUB_REPOSITORY": "'"$GITHUB_REPOSITORY"'",  "GITHUB_SHA": "'"$GITHUB_SHA"'" }}'
+          --data '{"event_type": "foo", "client_payload": { "GITHUB_REPOSITORY": "'"$GITHUB_REPOSITORY"'", "GITHUB_REPOSITORY_NAME": "${{ github.event.repository.name }}", "GITHUB_SHA": "'"$GITHUB_SHA"'" }}'
