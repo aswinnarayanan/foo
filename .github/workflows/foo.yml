@@ -1,6 +1,7 @@
 name: Foo-Bar Action Initiator
 
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
   pull_request:
